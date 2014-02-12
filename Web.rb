@@ -37,8 +37,12 @@ puts(tables.length)
 
 #puts("table 23====================")
 #puts(tables[23].content)
-#puts("End table 23====================")
 
+# puts("End table 23====================")
+
+#  ========== 
+#  = Banner = 
+#  ========== 
 html_data = tables[23]
 puts(html_data.class)
 html_doc = Nokogiri::HTML(tables[23].to_s())
@@ -59,8 +63,8 @@ puts(rows[1].content)  #Has data columns
 puts(Dir.pwd)
 filename = trnnum.to_s() + ".txt"
 aFile = File.new(filename,"w")
-#aFile.syswrite(tables[23].content)
-#aFile.syswrite(tables[24].content)
+aFile.syswrite(tables[23].content)
+aFile.syswrite(tables[24].content)
 aFile.close()
 
 puts('End================================================Done')
